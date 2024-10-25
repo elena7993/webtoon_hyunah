@@ -1,3 +1,6 @@
+import { useParams } from "react-router-dom";
+import styled from "styled-components";
+
 const webtoonInfo = [
   {
     id: 0,
@@ -65,8 +68,81 @@ const webtoonInfo = [
   },
 ];
 
+const ConWrap = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .imgwrap {
+    width: 195px;
+    height: 250px;
+    margin-top: 30px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .textwrap {
+    h3 {
+      margin: 10px 0;
+    }
+
+    p:nth-child(2) {
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    p:nth-child(3) {
+      color: #444;
+      margin-bottom: 45px;
+    }
+
+    p:nth-child(4) {
+      font-weight: 600;
+      font-family: "Times New Roman", Times, serif;
+      color: #797979;
+    }
+  }
+
+  .rightcon {
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    background: #f1f1f1
+      url(https://www.doyacart.com/upFolder/doyacart/upFolder/upFile/summernote/dy_design_customize/1698731845686_courseInfoImage_6540973dab468_0.webp)
+      no-repeat center / cover;
+    margin-top: 30px;
+  }
+`;
+
 const Sub = () => {
-  return <div></div>;
+  const params = useParams();
+  const id = params.id;
+
+  return (
+    <div>
+      <ConWrap>
+        <div className="leftcon">
+          <div className="imgwrap">
+            <img src={webtoonInfo[id].img} alt={webtoonInfo[id].title} />
+          </div>
+
+          <div className="textwrap">
+            <h3>{webtoonInfo[id].title}</h3>
+            <p>{webtoonInfo[id].writter}</p>
+            <p>{webtoonInfo[id].desc}</p>
+            <p>{webtoonInfo[id].hashTag}</p>
+          </div>
+        </div>
+
+        <div className="rightcon"></div>
+      </ConWrap>
+    </div>
+  );
 };
 
 export default Sub;

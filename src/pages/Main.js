@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const webtoonMain = [
   {
@@ -36,27 +37,28 @@ const webtoonMain = [
 
 const Wrap = styled.div`
   width: 100%;
-  height: 100vh;
+  max-width: 1200px;
+  height: 500px;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin: 0 auto;
 `;
 
 const ConWrap = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 30px;
 `;
 
 const Con = styled.div`
-  width: 200px;
+  width: 220px;
   height: 300px;
   /* background-color: lightgrey; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   a {
     text-decoration: none;
     color: #000;
@@ -78,22 +80,32 @@ const Con = styled.div`
   }
 `;
 
+const BgWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  background: #f1f1f1 url() no-repeat center / cover;
+  margin: 0 auto;
+`;
+
 const Main = () => {
   return (
     <>
-      <Wrap>
-        <ConWrap>
-          {webtoonMain.map((webtoon) => (
-            <Con key={webtoon.id}>
-              <a href="#">
-                <img src={webtoon.img} alt={webtoon.title} />
-                <h3>{webtoon.title}</h3>
-                <p>{webtoon.wirtter}</p>
-              </a>
-            </Con>
-          ))}
-        </ConWrap>
-      </Wrap>
+      <BgWrapper>
+        <Wrap>
+          <ConWrap>
+            {webtoonMain.map((webtoon) => (
+              <Con key={webtoon.id}>
+                <Link to={`/sub/${webtoon.id}`}>
+                  <img src={webtoon.img} alt={webtoon.title} />
+                  <h3>{webtoon.title}</h3>
+                  <p>{webtoon.wirtter}</p>
+                </Link>
+              </Con>
+            ))}
+          </ConWrap>
+        </Wrap>
+      </BgWrapper>
     </>
   );
 };
