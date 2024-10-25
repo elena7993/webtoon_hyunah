@@ -16,9 +16,9 @@ const webtoonMain = [
   },
   {
     id: 2,
-    title: "역대급 영지 설계사",
-    wirtter: "이현민/김현수/문백경",
-    img: "https://image-comic.pstatic.net/webtoon/777767/thumbnail/thumbnail_IMAG21_cc85f891-272b-450a-b642-cffe1568ab71.jpg",
+    title: "사신",
+    wirtter: "임재원/설봉",
+    img: "https://image-comic.pstatic.net/webtoon/799837/thumbnail/thumbnail_IMAG21_97023c54-e37e-4dca-9c62-9bf3b04413ce.jpg",
   },
   {
     id: 3,
