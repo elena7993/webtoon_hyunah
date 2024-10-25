@@ -1,8 +1,10 @@
+import Webtoon from "./Webtoon";
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Webtoon />
+    </>
   );
 }
 

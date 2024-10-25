@@ -1,5 +1,111 @@
+import styled from "styled-components";
+
+const webtoonMain = [
+  {
+    id: 0,
+    title: "낙향문사전",
+    wirtter: "바킹독",
+    img: "https://image-comic.pstatic.net/webtoon/746534/thumbnail/thumbnail_IMAG21_2df4002b-4597-4eed-8cdd-cb77eb73ad83.jpg",
+  },
+  {
+    id: 1,
+    title: "천하제일 대사형",
+    wirtter: "YooN/북미혼",
+    img: "https://image-comic.pstatic.net/webtoon/802278/thumbnail/thumbnail_IMAG21_1f75b2d4-e3cd-4a9f-917e-635557178b08.jpg",
+  },
+  {
+    id: 2,
+    title: "역대급 영지 설계사",
+    wirtter: "이현민/김현수/문백경",
+    img: "https://image-comic.pstatic.net/webtoon/777767/thumbnail/thumbnail_IMAG21_cc85f891-272b-450a-b642-cffe1568ab71.jpg",
+  },
+  {
+    id: 3,
+    title: "광마회귀",
+    wirtter: "JP/이히/유진성",
+    img: "https://image-comic.pstatic.net/webtoon/776601/thumbnail/thumbnail_IMAG21_7365135131254864183.jpg",
+  },
+  {
+    id: 4,
+    title: "남궁세가 비인격",
+    wirtter: "해사",
+    img: "https://image-comic.pstatic.net/webtoon/827744/thumbnail/thumbnail_IMAG21_a94e2923-a434-4dc1-925f-a2ba4005a122.jpg",
+  },
+];
+
+const Wrap = styled.div`
+  width: 100%;
+  height: 100vh;
+`;
+
+const Header = styled.div`
+  height: 100px;
+  border-bottom: 1px solid #f1f1f1;
+`;
+
+const ConWrap = styled.div`
+  width: 100%;
+  max-width: 1000px;
+`;
+
+const Con = styled.div`
+  width: 230px;
+  height: 300px;
+  background-color: lightgrey;
+`;
+
 const Main = () => {
-  return <div></div>
+  return (
+    <>
+      <Wrap>
+        <Header>
+          <img src="" alt="" />
+        </Header>
+
+        <ConWrap>
+          <Con>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </Con>
+
+          <Con>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </Con>
+
+          <Con>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </Con>
+
+          <Con>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </Con>
+
+          <Con>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </Con>
+        </ConWrap>
+      </Wrap>
+    </>
+  );
 };
 
 export default Main;
