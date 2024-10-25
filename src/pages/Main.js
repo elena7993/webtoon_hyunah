@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Header from "../components/Header";
 
 const webtoonMain = [
   {
@@ -36,72 +37,61 @@ const webtoonMain = [
 const Wrap = styled.div`
   width: 100%;
   height: 100vh;
-`;
-
-const Header = styled.div`
-  height: 100px;
-  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 `;
 
 const ConWrap = styled.div`
   width: 100%;
   max-width: 1000px;
+  display: flex;
+  justify-content: center;
 `;
 
 const Con = styled.div`
-  width: 230px;
+  width: 200px;
   height: 300px;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  img {
+    width: 220px;
+    height: 300px;
+  }
+
+  h3 {
+    margin: 10px 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+  }
 `;
 
 const Main = () => {
   return (
     <>
       <Wrap>
-        <Header>
-          <img src="" alt="" />
-        </Header>
-
         <ConWrap>
-          <Con>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <h3></h3>
-            <p></p>
-          </Con>
-
-          <Con>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <h3></h3>
-            <p></p>
-          </Con>
-
-          <Con>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <h3></h3>
-            <p></p>
-          </Con>
-
-          <Con>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <h3></h3>
-            <p></p>
-          </Con>
-
-          <Con>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <h3></h3>
-            <p></p>
-          </Con>
+          {webtoonMain.map((webtoon) => (
+            <Con key={webtoon.id}>
+              <a href="#">
+                <img src={webtoon.img} alt={webtoon.title} />
+                <h3>{webtoon.title}</h3>
+                <p>{webtoon.wirtter}</p>
+              </a>
+            </Con>
+          ))}
         </ConWrap>
       </Wrap>
     </>
